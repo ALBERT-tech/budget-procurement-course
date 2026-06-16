@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Бюджет и закупки без разрывов — курс АО «Сбербанк-АСТ»</title>
-<meta name="description" content="Практический курс для заказчиков и финансовых специалистов на стыке 44-ФЗ и бюджетного процесса. Единая логика: от бюджета и ЛБО до планирования закупок, исполнения контракта и финансового контроля.">
+<meta name="description" content="Практический курс для заказчиков и финансовых специалистов на стыке 44-ФЗ и бюджетного процесса. Сквозная логика: от бюджета и казначейского обслуживания через ЛБО, планирование и исполнение — до казначейского платежа, финансового контроля и матрицы всех контролей.">
 <meta name="theme-color" content="#14161d">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Бюджет и закупки без разрывов — от планирования до контроля">
-<meta property="og:description" content="Практический курс АО «Сбербанк-АСТ». Единая система: бюджет → ЛБО → планирование закупок → исполнение контракта → финансовый контроль.">
+<meta property="og:description" content="Практический курс АО «Сбербанк-АСТ». Сквозная система: бюджет и казначейство → ЛБО и планирование → исполнение и приёмка → казначейский платёж → контроль и матрица.">
 <meta property="og:locale" content="ru_RU">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -163,8 +163,8 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
 
 /* ===== Offer / chain ===== */
 .offer{background:var(--cream)}
-.chain{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:46px 0 8px;counter-reset:step}
-@media(max-width:760px){.chain{grid-template-columns:1fr;gap:0}}
+.chain{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:46px 0 8px;counter-reset:step}
+@media(max-width:980px){.chain{grid-template-columns:1fr;gap:0}}
 .chain__step{position:relative;padding:30px 26px;background:var(--paper);border:1px solid var(--line);counter-increment:step}
 .chain__step:first-child{border-radius:var(--radius) 0 0 var(--radius)}
 .chain__step:last-child{border-radius:0 var(--radius) var(--radius) 0}
@@ -175,7 +175,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
 .chain__num::before{content:"0" counter(step)}
 .chain__step h4{font-size:17px;margin-top:12px;letter-spacing:-.01em}
 .chain__step p{font-size:14px;color:var(--muted);margin-top:7px}
-@media(max-width:760px){
+@media(max-width:980px){
   .chain__step{border-radius:0!important;border-left:1px solid var(--line)!important}
   .chain__step:first-child{border-radius:var(--radius) var(--radius) 0 0!important}
   .chain__step:last-child{border-radius:0 0 var(--radius) var(--radius)!important}
@@ -438,12 +438,13 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
       </div>
       <div class="flow-card reveal">
         <div class="flow-card__title">Единая логика курса</div>
-        <div class="flow-card__head">Бюджет, закупка и контроль — как один механизм</div>
+        <div class="flow-card__head">Сквозная логика: от бюджета — до казначейского платежа</div>
         <div class="vflow">
-          <div class="vflow__item"><span class="vflow__dot">1</span><span class="vflow__txt"><b>Бюджет и ЛБО</b><span>лимиты, обязательства, классификация</span></span></div>
-          <div class="vflow__item"><span class="vflow__dot">2</span><span class="vflow__txt"><b>Планирование закупок</b><span>синхронизация с бюджетом</span></span></div>
-          <div class="vflow__item"><span class="vflow__dot">3</span><span class="vflow__txt"><b>Исполнение контракта</b><span>кассовое исполнение и учёт</span></span></div>
-          <div class="vflow__item"><span class="vflow__dot">4</span><span class="vflow__txt"><b>Финансовый контроль</b><span>логика проверяющих, снижение рисков</span></span></div>
+          <div class="vflow__item"><span class="vflow__dot">1</span><span class="vflow__txt"><b>Бюджет и казначейство</b><span>лицевые счета, КУ / БУ / АУ</span></span></div>
+          <div class="vflow__item"><span class="vflow__dot">2</span><span class="vflow__txt"><b>ЛБО и планирование</b><span>лимиты, ПФХД, обязательства</span></span></div>
+          <div class="vflow__item"><span class="vflow__dot">3</span><span class="vflow__txt"><b>Исполнение и приёмка</b><span>денежные обязательства</span></span></div>
+          <div class="vflow__item"><span class="vflow__dot">4</span><span class="vflow__txt"><b>Казначейский платёж</b><span>распоряжение и сроки</span></span></div>
+          <div class="vflow__item"><span class="vflow__dot">5</span><span class="vflow__txt"><b>Контроль и матрица</b><span>все контроли от плана до платежа</span></span></div>
         </div>
       </div>
     </div>
@@ -456,14 +457,15 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
     <div class="section-head reveal">
       <span class="eyebrow">Главный оффер</span>
       <h2 class="h2">Курс, который выстроит для вас единую&nbsp;логику</h2>
-      <p class="lead" style="margin-top:18px">От бюджета и ЛБО — к планированию закупок, к исполнению контракта и финансовому контролю. Не разрозненные нормы, а целостная система.</p>
+      <p class="lead" style="margin-top:18px">От бюджета и казначейского обслуживания — к ЛБО и планированию, к исполнению контракта и денежным обязательствам, к казначейскому платежу и финансовому контролю. Не разрозненные нормы, а целостная система от плана до платежа.</p>
     </div>
 
     <div class="chain reveal">
-      <div class="chain__step"><span class="chain__num"></span><h4>Бюджет и ЛБО</h4><p>Откуда берутся деньги и лимиты</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>Планирование закупок</h4><p>Связка плана и бюджета</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>Исполнение контракта</h4><p>Обязательства и кассовое исполнение</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>Финансовый контроль</h4><p>Проверки и снижение рисков</p></div>
+      <div class="chain__step"><span class="chain__num"></span><h4>Бюджет и казначейство</h4><p>Лицевые счета, классификация</p></div>
+      <div class="chain__step"><span class="chain__num"></span><h4>ЛБО и планирование</h4><p>Лимиты, ПФХД, обязательства</p></div>
+      <div class="chain__step"><span class="chain__num"></span><h4>Исполнение и приёмка</h4><p>Денежные обязательства</p></div>
+      <div class="chain__step"><span class="chain__num"></span><h4>Платёж</h4><p>Казначейские платежи</p></div>
+      <div class="chain__step"><span class="chain__num"></span><h4>Контроль и матрица</h4><p>Все контроли от плана до платежа</p></div>
     </div>
 
     <div class="offer__cols reveal">
@@ -491,7 +493,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
     <div class="section-head reveal">
       <span class="eyebrow">Для кого этот курс</span>
       <h2 class="h2">Для тех, кто работает с бюджетом, обязательствами и контрактами одновременно</h2>
-      <p class="lead" style="margin-top:18px">Курс создан для участников рынка госзакупок, которым необходимо уверенно соединять финансовый и закупочный блоки.</p>
+      <p class="lead" style="margin-top:18px">Курс — для тех, кто хочет комплексно понять процесс закупок в связке с бюджетным процессом и чётко видеть, кто на каком этапе несёт ответственность.</p>
     </div>
     <div class="aud-grid reveal">
       <div class="aud-item"><span class="aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span><p>Заказчики по 44-ФЗ и их руководители</p></div>
@@ -540,7 +542,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
     </div>
     <div class="result-banner reveal">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-      <p><b>Итог:</b> работающая схема от планирования бюджета до исполнения контракта и прохождения контроля.</p>
+      <p><b>Итог:</b> работающая схема от планирования бюджета до казначейского платежа и прохождения контроля.</p>
     </div>
   </div>
 </section>
@@ -578,17 +580,17 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
         <summary class="module__head">
           <span class="module__no">01</span>
           <span class="module__titles">
-            <span class="module__title">Бюджетный процесс для закупщика</span>
-            <span class="module__sub">Что важно понимать на практике</span>
+            <span class="module__title">Бюджетный процесс и казначейское обслуживание</span>
+            <span class="module__sub">Где закупка находится в бюджетном процессе — на практике</span>
           </span>
           <span class="module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
         <div class="module__body">
           <ul>
-            <li>Кто участвует в бюджетном процессе и какие роли выполняет</li>
-            <li>Как формируется бюджет и где в нём закупки</li>
-            <li>Значение бюджетной классификации для заказчика</li>
-            <li>Где возникают ключевые риски на старте</li>
+            <li>Учреждение в системе казначейского обслуживания: особенности для КУ и БУ</li>
+            <li>Роль Казначейства России и финансовых органов</li>
+            <li>Типы лицевых счетов по типам учреждений и их связь с бюджетными данными</li>
+            <li>Бюджетная классификация (КБК) и где возникают ключевые риски на старте</li>
           </ul>
         </div>
       </details>
@@ -597,23 +599,25 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
         <summary class="module__head">
           <span class="module__no">02</span>
           <span class="module__titles">
-            <span class="module__title">ЛБО и бюджетные обязательства</span>
-            <span class="module__sub">Доведение, распределение и типовые ошибки</span>
+            <span class="module__title">ЛБО, планирование закупок и блокирующий контроль</span>
+            <span class="module__sub">Как не допустить расхождений между лимитами и закупками</span>
           </span>
           <span class="module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
         <div class="module__body">
           <ul>
-            <li>Что такое ЛБО и как они доводятся</li>
-            <li>Связь ЛБО и планирования закупок</li>
-            <li>Принятие бюджетных обязательств</li>
-            <li>Частые ошибки заказчиков:
+            <li>ЛБО и лимиты / ПФХД на лицевых счетах: доведение и распределение</li>
+            <li>Связь плана закупок, ПФХД и бюджета; обоснование и синхронизация сроков</li>
+            <li>Извещение и связь с принимаемым обязательством; перечень финансовых контролей (особенности БУ)</li>
+            <li>Блокирующий контроль целевого расходования бюджетных средств</li>
+            <li>Типовые ошибки заказчиков:
               <ul class="sub-ul">
                 <li>закупка без достаточных лимитов</li>
                 <li>некорректная детализация</li>
                 <li>несоответствие КБК</li>
               </ul>
             </li>
+            <li>Кейсы: «план есть — денег нет» и «деньги есть — закупка не запланирована»</li>
           </ul>
         </div>
       </details>
@@ -622,40 +626,17 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
         <summary class="module__head">
           <span class="module__no">03</span>
           <span class="module__titles">
-            <span class="module__title">Планирование закупок через призму бюджета</span>
-            <span class="module__sub">Как не допустить расхождений</span>
+            <span class="module__title">Исполнение контракта и денежные обязательства</span>
+            <span class="module__sub">Принятие обязательств, приёмка, кассовое исполнение — тонкости БУ и АУ</span>
           </span>
           <span class="module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
         <div class="module__body">
           <ul>
-            <li>Связь плана закупок, ПФХД и бюджета</li>
-            <li>Обоснование закупок с точки зрения бюджета</li>
-            <li>Синхронизация сроков</li>
-            <li>Кейсы:
-              <ul class="sub-ul">
-                <li>«план есть — денег нет»</li>
-                <li>«деньги есть — закупка не запланирована»</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="module">
-        <summary class="module__head">
-          <span class="module__no">04</span>
-          <span class="module__titles">
-            <span class="module__title">Контракт и бюджетное исполнение</span>
-            <span class="module__sub">Принятие обязательств, кассовое исполнение, риски</span>
-          </span>
-          <span class="module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
-        </summary>
-        <div class="module__body">
-          <ul>
-            <li>Принятие и учёт обязательств</li>
-            <li>Кассовое исполнение</li>
-            <li>Последствия изменений, переносов, расторжений контрактов</li>
+            <li>Контракт и бюджетное обязательство: какие тонкости на этом этапе</li>
+            <li>Документ о приёмке: его роль в бюджетном процессе и связь с бухгалтерским учётом</li>
+            <li>Автосанкция денежных обязательств и что нужно сделать, чтобы всё прошло без ошибок</li>
+            <li>Кассовое исполнение; последствия изменений, переносов и расторжений контрактов</li>
             <li>Риски:
               <ul class="sub-ul">
                 <li>превышение лимитов</li>
@@ -669,9 +650,27 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
 
       <details class="module">
         <summary class="module__head">
+          <span class="module__no">04</span>
+          <span class="module__titles">
+            <span class="module__title">Платёж и система казначейских платежей</span>
+            <span class="module__sub">Как деньги доходят до поставщика — и от чего зависят сроки</span>
+          </span>
+          <span class="module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <div class="module__body">
+          <ul>
+            <li>Распоряжение о совершении казначейского платежа</li>
+            <li>Роль Казначейства России при проведении платежа</li>
+            <li>Сколько ждать платёж и что влияет на сроки</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="module">
+        <summary class="module__head">
           <span class="module__no">05</span>
           <span class="module__titles">
-            <span class="module__title">Финансовый контроль закупок</span>
+            <span class="module__title">Финансовый контроль и матрица контролей</span>
             <span class="module__sub">Как смотрят проверяющие и где чаще всего «ловят»</span>
           </span>
           <span class="module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
@@ -682,8 +681,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
             <span>Модуль с участием <b>Юлии Обаляевой</b></span>
           </div>
           <ul>
-            <li>Кто и как проверяет закупки с точки зрения бюджета</li>
-            <li>Логика контрольных органов</li>
+            <li>Кто и как проверяет закупки с точки зрения бюджета; логика контрольных органов</li>
             <li>Типовые нарушения:
               <ul class="sub-ul">
                 <li>несоответствие ЛБО</li>
@@ -691,8 +689,8 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
                 <li>нарушения при исполнении контрактов</li>
               </ul>
             </li>
-            <li>Как подготовиться к проверке</li>
-            <li>Рекомендации по снижению рисков</li>
+            <li>Как подготовиться к проверке и рекомендации по снижению рисков</li>
+            <li><b>Матрица всех бюджетных и финансовых контролей</b> на всех этапах закупки — от планирования до платежа</li>
           </ul>
         </div>
       </details>
@@ -711,7 +709,12 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
       <div class="chain__step"><span class="chain__num"></span><h4>Планирование бюджета</h4><p>Отправная точка системы</p></div>
       <div class="chain__step"><span class="chain__num"></span><h4>Доведение ЛБО</h4><p>Лимиты и обязательства</p></div>
       <div class="chain__step"><span class="chain__num"></span><h4>Планирование и исполнение закупок</h4><p>Синхронно с бюджетом</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>Учёт и контроль</h4><p>Готовность к проверке</p></div>
+      <div class="chain__step"><span class="chain__num"></span><h4>Казначейский платёж</h4><p>Доведение до денег</p></div>
+      <div class="chain__step"><span class="chain__num"></span><h4>Учёт, контроль, матрица</h4><p>Готовность к проверке</p></div>
+    </div>
+    <div class="result-banner reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+      <p><b>На выходе — матрица всех контролей:</b> кто, что и на каком этапе проверяет — от планирования до казначейского платежа.</p>
     </div>
     <div class="result__note reveal">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 16v-4M12 8h.01"/></svg>

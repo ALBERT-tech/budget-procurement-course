@@ -1,7 +1,8 @@
 ﻿<meta charset="utf-8">
 <!-- ═════════════════════════════════════════════════════════════════════
   «БЮДЖЕТНОЕ ОКРУЖЕНИЕ ПРОЦЕССА ЗАКУПОК. ПРОСТО О СЛОЖНОМ»
-  Версия для ГетКурса (v3): 3 занятия, цены 9 000 ₽ курс / 3 000 ₽ занятие
+  Онлайн-школа «Закупки в цифре» · cifrazakup.ru
+  Версия для ГетКурса (v4): 3 занятия, цены 9 000 ₽ курс / 3 000 ₽ занятие
 
   Страница собрана из НЕЗАВИСИМЫХ блоков — глобальной обёртки нет.
 
@@ -342,6 +343,9 @@ body.bpz-menu-open .bpz-mobile-menu{transform:translateY(0);opacity:1;pointer-ev
 .bpz-footer__bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:28px;font-size:13px}
 .bpz-footer__credit a{color:#5fd29a;font-weight:600}
 .bpz-footer__credit a:hover{text-decoration:underline}
+.bpz-footer__legal{display:flex;gap:24px;flex-wrap:wrap;padding-top:24px;font-size:13.5px}
+.bpz-footer__legal a{color:rgba(255,255,255,.55);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+.bpz-footer__legal a:hover{color:#fff}
 
 /* ── Появление при прокрутке (без скрипта всё просто видимо) ── */
 html.bpz-js .bpz-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
@@ -407,11 +411,11 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
 <header class="bpz-sec bpz-header" id="bpzHeader">
   <div class="bpz-wrap">
     <nav class="bpz-nav">
-      <a href="#bpz-hero" class="bpz-brand" aria-label="Сбербанк-АСТ, Электронный университет">
+      <a href="#bpz-hero" class="bpz-brand" aria-label="Онлайн-школа «Закупки в цифре», cifrazakup.ru">
         <span class="bpz-brand__mark"><span></span></span>
         <span class="bpz-brand__txt">
-          <span class="bpz-brand__name">Сбербанк-АСТ</span>
-          <span class="bpz-brand__sub">Электронный университет</span>
+          <span class="bpz-brand__name">Закупки в цифре</span>
+          <span class="bpz-brand__sub">онлайн-школа</span>
         </span>
       </a>
       <div class="bpz-nav__links">
@@ -447,7 +451,7 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
   <div class="bpz-wrap">
     <div class="bpz-hero__inner">
       <div>
-        <span class="bpz-eyebrow bpz-eyebrow--light">АО «Сбербанк-АСТ» · Электронный университет</span>
+        <span class="bpz-eyebrow bpz-eyebrow--light">Онлайн-школа «Закупки в цифре» · cifrazakup.ru</span>
         <h1>Бюджетное окружение процесса закупок<span class="bpz-hero__sub">просто о сложном</span></h1>
         <p class="bpz-hero__desc">Практический курс для заказчиков и финансовых специалистов, работающих на стыке 44-ФЗ и бюджетного процесса.</p>
         <div class="bpz-hero__actions">
@@ -785,7 +789,10 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
 <!-- ═════════ ✂ БЛОК 12. ЗАПИСЬ (тёмный призыв) ═════════
      СРАЗУ ПОСЛЕ этого блока вставьте нативный блок «Форма» ГетКурса —
      заявки будут попадать в CRM и запускать процессы. В форме дайте выбор:
-     «Весь курс — 9 000 ₽» или «Занятие 1 / 2 / 3 — 3 000 ₽». ═════════ -->
+     «Весь курс — 9 000 ₽» или «Занятие 1 / 2 / 3 — 3 000 ₽».
+     ОБЯЗАТЕЛЬНО добавьте в форму чекбокс согласия со ссылками на
+     публичную оферту и политику обработки персональных данных
+     онлайн-школы «Закупки в цифре» (cifrazakup.ru). ═════════ -->
 <section class="bpz-sec bpz-section bpz-register" id="bpz-register">
   <div class="bpz-register__grid-bg"></div>
   <div class="bpz-wrap">
@@ -816,8 +823,8 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
       <div class="bpz-brand" style="color:#fff">
         <span class="bpz-brand__mark"><span></span></span>
         <span class="bpz-brand__txt">
-          <span class="bpz-brand__name">Сбербанк-АСТ</span>
-          <span class="bpz-brand__sub">Электронный университет</span>
+          <span class="bpz-brand__name">Закупки в цифре</span>
+          <span class="bpz-brand__sub">онлайн-школа</span>
         </span>
       </div>
       <div class="bpz-footer__nav">
@@ -829,8 +836,14 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
         <a href="#bpz-register">Записаться</a>
       </div>
     </div>
+    <div class="bpz-footer__legal">
+      <!-- TODO: замените ссылки на точные адреса оферты и политики ПДн на cifrazakup.ru -->
+      <a href="https://cifrazakup.ru" target="_blank" rel="noopener">Публичная оферта</a>
+      <a href="https://cifrazakup.ru" target="_blank" rel="noopener">Политика обработки персональных данных</a>
+      <a href="https://cifrazakup.ru" target="_blank" rel="noopener">cifrazakup.ru</a>
+    </div>
     <div class="bpz-footer__bottom">
-      <span>© АО «Сбербанк-АСТ», Электронный университет. Курс «Бюджетное окружение процесса закупок. Просто о сложном».</span>
+      <span>© Онлайн-школа «Закупки в цифре» · cifrazakup.ru. Курс «Бюджетное окружение процесса закупок. Просто о сложном».</span>
       <span class="bpz-footer__credit">Разработано в лаборатории <a href="https://t.me/tickettotender" target="_blank" rel="noopener">«Тендеры ex machina»</a></span>
     </div>
   </div>

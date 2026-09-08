@@ -1,6 +1,7 @@
 ﻿<meta charset="utf-8">
 <!-- ═════════════════════════════════════════════════════════════════════
-  «БЮДЖЕТ И ЗАКУПКИ БЕЗ РАЗРЫВОВ» — версия для ГетКурса (v2, блочная)
+  «БЮДЖЕТНОЕ ОКРУЖЕНИЕ ПРОЦЕССА ЗАКУПОК. ПРОСТО О СЛОЖНОМ»
+  Версия для ГетКурса (v3): 3 занятия, цены 9 000 ₽ курс / 3 000 ₽ занятие
 
   Страница собрана из НЕЗАВИСИМЫХ блоков — глобальной обёртки нет.
 
@@ -145,7 +146,7 @@ body.bpz-menu-open .bpz-mobile-menu{transform:translateY(0);opacity:1;pointer-ev
 .bpz-hero .bpz-wrap{position:relative;z-index:2}
 .bpz-hero__inner{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
 @media(max-width:980px){.bpz-hero__inner{grid-template-columns:1fr;gap:48px}}
-.bpz-hero h1{font-size:clamp(40px,6.4vw,76px);line-height:1.02;letter-spacing:-.03em;color:#fff}
+.bpz-hero h1{font-size:clamp(36px,5.6vw,64px);line-height:1.04;letter-spacing:-.03em;color:#fff}
 .bpz-hero__sub{display:block;font-size:clamp(22px,3.2vw,34px);font-weight:600;color:#5fd29a;margin-top:14px;letter-spacing:-.02em}
 .bpz-hero__desc{margin-top:28px;font-size:clamp(16px,2vw,19px);color:rgba(255,255,255,.72);max-width:560px;line-height:1.6}
 .bpz-hero__actions{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
@@ -165,7 +166,7 @@ body.bpz-menu-open .bpz-mobile-menu{transform:translateY(0);opacity:1;pointer-ev
 
 /* ── Цепочка этапов ── */
 .bpz-offer{background:var(--cream)}
-.bpz-chain{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:46px 0 8px;counter-reset:bpzstep}
+.bpz-chain{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:46px 0 8px;counter-reset:bpzstep}
 .bpz-chain__step{position:relative;padding:30px 26px;background:var(--paper);border:1px solid var(--line);counter-increment:bpzstep}
 .bpz-chain__step:first-child{border-radius:var(--radius) 0 0 var(--radius)}
 .bpz-chain__step:last-child{border-radius:0 var(--radius) var(--radius) 0}
@@ -174,9 +175,9 @@ body.bpz-menu-open .bpz-mobile-menu{transform:translateY(0);opacity:1;pointer-ev
 .bpz-chain__step:last-child::after{display:none}
 .bpz-chain__num{font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.1em}
 .bpz-chain__num::before{content:"0" counter(bpzstep)}
-.bpz-chain__step h4{font-size:17px;margin-top:12px;letter-spacing:-.01em}
+.bpz-chain__step h4{font-size:18px;margin-top:12px;letter-spacing:-.01em}
 .bpz-chain__step p{font-size:14px;color:var(--muted);margin-top:7px}
-@media(max-width:980px){
+@media(max-width:760px){
   .bpz-chain{grid-template-columns:1fr}
   .bpz-chain__step{border-radius:0!important;border-left:1px solid var(--line)!important}
   .bpz-chain__step:first-child{border-radius:var(--radius) var(--radius) 0 0!important}
@@ -201,6 +202,8 @@ body.bpz-menu-open .bpz-mobile-menu{transform:translateY(0);opacity:1;pointer-ev
 .bpz-aud-item:hover .bpz-aud-item__ic{background:var(--accent);color:#fff}
 .bpz-aud-item__ic svg{width:22px;height:22px}
 .bpz-aud-item p{font-size:16px;font-weight:600;color:var(--text);line-height:1.45;padding-top:8px}
+.bpz-org-note{margin-top:30px;padding:26px 30px;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);font-size:16px;color:var(--text);line-height:1.6;display:flex;gap:18px;align-items:flex-start}
+.bpz-org-note svg{width:26px;height:26px;color:var(--accent);flex:none;margin-top:2px}
 
 /* ── Зачем сейчас ── */
 .bpz-why{background:var(--ink);color:#fff}
@@ -251,6 +254,8 @@ body.bpz-menu-open .bpz-mobile-menu{transform:translateY(0);opacity:1;pointer-ev
 .bpz-module__titles{flex:1;min-width:0}
 .bpz-module__title{display:block;font-size:20px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
 .bpz-module__sub{display:block;font-size:14.5px;color:var(--muted);margin-top:6px;font-style:italic}
+.bpz-module__price{flex:none;padding:7px 14px;border-radius:50px;background:var(--accent-soft);color:var(--accent-2);font-size:13.5px;font-weight:800;white-space:nowrap}
+@media(max-width:640px){.bpz-module__price{display:none}}
 .bpz-module__toggle{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:background .3s var(--ease),transform .3s var(--ease),border-color .3s var(--ease)}
 .bpz-module__toggle svg{width:18px;height:18px;color:var(--ink);transition:transform .3s var(--ease)}
 .bpz-module[open] .bpz-module__toggle{background:var(--accent);border-color:var(--accent)}
@@ -260,18 +265,27 @@ body.bpz-menu-open .bpz-mobile-menu{transform:translateY(0);opacity:1;pointer-ev
 .bpz-module__body ul{display:flex;flex-direction:column;gap:11px;border-top:1px solid var(--line);padding-top:22px}
 .bpz-module__body li{position:relative;padding-left:26px;font-size:15.5px;color:var(--text);line-height:1.5}
 .bpz-module__body li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--accent)}
-.bpz-module__body .bpz-sub-ul{margin-top:11px;padding-top:0;border:none;padding-left:26px;gap:8px}
-.bpz-module__body .bpz-sub-ul li{font-size:14.5px;color:var(--muted);padding-left:20px}
-.bpz-module__body .bpz-sub-ul li::before{width:5px;height:5px;border-radius:50%;background:var(--muted-2);top:9px}
-.bpz-guest{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding:12px 16px;background:var(--accent-tint);border-left:3px solid var(--accent);border-radius:0 8px 8px 0}
-.bpz-guest svg{width:18px;height:18px;color:var(--accent);flex:none}
-.bpz-guest span{font-size:14.5px;color:var(--ink)}
-.bpz-guest b{font-weight:800}
 
-/* ── Итог ── */
-.bpz-result{background:var(--cream)}
-.bpz-result__note{margin-top:42px;padding:26px 30px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);font-size:16.5px;color:var(--text);line-height:1.6;display:flex;gap:18px;align-items:flex-start}
-.bpz-result__note svg{width:26px;height:26px;color:var(--accent);flex:none;margin-top:2px}
+/* ── Стоимость ── */
+.bpz-price{background:var(--cream)}
+.bpz-price-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:920px}
+@media(max-width:760px){.bpz-price-grid{grid-template-columns:1fr}}
+.bpz-price-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:38px 34px;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.bpz-price-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.bpz-price-card--hl{background:var(--ink);border-color:var(--ink);color:#fff}
+.bpz-price-card__lbl{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:16px}
+.bpz-price-card--hl .bpz-price-card__lbl{color:#5fd29a}
+.bpz-price-card__val{font-size:46px;font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1}
+.bpz-price-card--hl .bpz-price-card__val{color:#fff}
+.bpz-price-card__per{font-size:14.5px;color:var(--muted);margin-top:8px}
+.bpz-price-card--hl .bpz-price-card__per{color:rgba(255,255,255,.6)}
+.bpz-price-card__list{margin:26px 0 30px;display:flex;flex-direction:column;gap:12px}
+.bpz-price-card__list li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.5;color:var(--text)}
+.bpz-price-card--hl .bpz-price-card__list li{color:rgba(255,255,255,.88)}
+.bpz-price-card__list svg{width:20px;height:20px;color:var(--accent);flex:none;margin-top:1px}
+.bpz-price-card--hl .bpz-price-card__list svg{color:#5fd29a}
+.bpz-price-card .bpz-btn{margin-top:auto}
+.bpz-price-note{margin-top:22px;font-size:14.5px;color:var(--muted)}
 
 /* ── Спикер ── */
 .bpz-speaker__card{display:grid;grid-template-columns:300px 1fr;gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--paper)}
@@ -371,7 +385,7 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
       els.forEach(function(el){io.observe(el);});
     }else{ els.forEach(function(el){el.classList.add('bpz-on');}); }
 
-    /* Аккордеон программы: открыт один модуль */
+    /* Аккордеон программы: открыто одно занятие */
     var modules=document.querySelectorAll('.bpz-module');
     modules.forEach(function(m){
       var head=m.querySelector('.bpz-module__head');
@@ -404,7 +418,7 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
         <a href="#bpz-offer">О курсе</a>
         <a href="#bpz-audience">Для кого</a>
         <a href="#bpz-program">Программа</a>
-        <a href="#bpz-format">Формат</a>
+        <a href="#bpz-price">Стоимость</a>
         <a href="#bpz-speaker">Спикер</a>
       </div>
       <div class="bpz-nav__cta">
@@ -419,7 +433,7 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
   <a href="#bpz-offer">О курсе</a>
   <a href="#bpz-audience">Для кого</a>
   <a href="#bpz-program">Программа</a>
-  <a href="#bpz-format">Формат</a>
+  <a href="#bpz-price">Стоимость</a>
   <a href="#bpz-speaker">Спикер</a>
   <a href="#bpz-register" class="bpz-btn bpz-btn--primary bpz-btn--lg bpz-btn--block">Записаться на курс</a>
 </div>
@@ -434,7 +448,7 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
     <div class="bpz-hero__inner">
       <div>
         <span class="bpz-eyebrow bpz-eyebrow--light">АО «Сбербанк-АСТ» · Электронный университет</span>
-        <h1>Бюджет и закупки без&nbsp;разрывов<span class="bpz-hero__sub">от планирования до контроля</span></h1>
+        <h1>Бюджетное окружение процесса закупок<span class="bpz-hero__sub">просто о сложном</span></h1>
         <p class="bpz-hero__desc">Практический курс для заказчиков и финансовых специалистов, работающих на стыке 44-ФЗ и бюджетного процесса.</p>
         <div class="bpz-hero__actions">
           <a href="#bpz-register" class="bpz-btn bpz-btn--primary bpz-btn--lg">Записаться на курс
@@ -443,20 +457,18 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
           <a href="#bpz-program" class="bpz-btn bpz-btn--ghost bpz-btn--lg" style="color:#fff;border-color:rgba(255,255,255,.25)">Смотреть программу</a>
         </div>
         <div class="bpz-hero__chips">
-          <span class="bpz-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>5 вебинаров</span>
-          <span class="bpz-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16"/></svg>5 модулей</span>
+          <span class="bpz-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>3 занятия</span>
           <span class="bpz-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 7v5l3 2"/></svg>Онлайн + доступ к записям</span>
+          <span class="bpz-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V8a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h14a2 2 0 002-2v-4zm0 0h-6a2 2 0 000 4h6"/></svg>9&nbsp;000&nbsp;₽ за весь курс</span>
         </div>
       </div>
       <div class="bpz-flow-card bpz-reveal">
-        <div class="bpz-flow-card__title">Единая логика курса</div>
-        <div class="bpz-flow-card__head">Сквозная логика: от бюджета — до казначейского платежа</div>
+        <div class="bpz-flow-card__title">Логика курса</div>
+        <div class="bpz-flow-card__head">Три занятия — весь путь бюджетных денег в закупке</div>
         <div class="bpz-vflow">
-          <div class="bpz-vflow__item"><span class="bpz-vflow__dot">1</span><span class="bpz-vflow__txt"><b>Бюджет и казначейство</b><span>лицевые счета, КУ / БУ / АУ</span></span></div>
-          <div class="bpz-vflow__item"><span class="bpz-vflow__dot">2</span><span class="bpz-vflow__txt"><b>ЛБО и планирование</b><span>лимиты, ПФХД, обязательства</span></span></div>
-          <div class="bpz-vflow__item"><span class="bpz-vflow__dot">3</span><span class="bpz-vflow__txt"><b>Исполнение и приёмка</b><span>денежные обязательства</span></span></div>
-          <div class="bpz-vflow__item"><span class="bpz-vflow__dot">4</span><span class="bpz-vflow__txt"><b>Казначейский платёж</b><span>распоряжение и сроки</span></span></div>
-          <div class="bpz-vflow__item"><span class="bpz-vflow__dot">5</span><span class="bpz-vflow__txt"><b>Контроль и матрица</b><span>все контроли от плана до платежа</span></span></div>
+          <div class="bpz-vflow__item"><span class="bpz-vflow__dot">1</span><span class="bpz-vflow__txt"><b>Бюджетный процесс</b><span>казначейское обслуживание, лицевые счета</span></span></div>
+          <div class="bpz-vflow__item"><span class="bpz-vflow__dot">2</span><span class="bpz-vflow__txt"><b>Планирование и контроль</b><span>лимиты, ПФХД, целевое расходование</span></span></div>
+          <div class="bpz-vflow__item"><span class="bpz-vflow__dot">3</span><span class="bpz-vflow__txt"><b>Исполнение и оплата</b><span>контракт и казначейский платёж</span></span></div>
         </div>
       </div>
     </div>
@@ -471,14 +483,12 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
     <div class="bpz-section-head bpz-reveal">
       <span class="bpz-eyebrow">Главный оффер</span>
       <h2 class="bpz-h2">Курс, который выстроит для вас единую&nbsp;логику</h2>
-      <p class="bpz-lead" style="margin-top:18px">От бюджета и казначейского обслуживания — к ЛБО и планированию, к исполнению контракта и денежным обязательствам, к казначейскому платежу и финансовому контролю. Не разрозненные нормы, а целостная система от плана до платежа.</p>
+      <p class="bpz-lead" style="margin-top:18px">От бюджетного процесса и казначейского обслуживания — к планированию закупок и блокирующему контролю, к исполнению контракта и казначейскому платежу. Просто — о сложном.</p>
     </div>
     <div class="bpz-chain bpz-reveal">
-      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Бюджет и казначейство</h4><p>Лицевые счета, классификация</p></div>
-      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>ЛБО и планирование</h4><p>Лимиты, ПФХД, обязательства</p></div>
-      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Исполнение и приёмка</h4><p>Денежные обязательства</p></div>
-      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Платёж</h4><p>Казначейские платежи</p></div>
-      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Контроль и матрица</h4><p>Все контроли от плана до платежа</p></div>
+      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Бюджетный процесс</h4><p>Казначейство, лицевые счета, финорганы</p></div>
+      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Планирование и контроль</h4><p>Лимиты, ПФХД, целевое расходование</p></div>
+      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Исполнение и оплата</h4><p>Контракт и казначейские платежи</p></div>
     </div>
     <div class="bpz-checklist bpz-reveal">
       <div class="bpz-check-card">
@@ -510,9 +520,13 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
     <div class="bpz-aud-grid bpz-reveal">
       <div class="bpz-aud-item"><span class="bpz-aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span><p>Заказчики по 44-ФЗ и их руководители</p></div>
       <div class="bpz-aud-item"><span class="bpz-aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span><p>Специалисты финансовых служб и управлений бюджетного контроля</p></div>
-      <div class="bpz-aud-item"><span class="bpz-aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></span><p>Сотрудники, отвечающие за ЛБО и бюджетные обязательства</p></div>
+      <div class="bpz-aud-item"><span class="bpz-aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></span><p>Сотрудники, отвечающие за лимиты и бюджетные обязательства</p></div>
       <div class="bpz-aud-item"><span class="bpz-aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7"/></svg></span><p>Те, кто согласует план закупок с бюджетными ограничениями</p></div>
       <div class="bpz-aud-item" style="grid-column:1/-1"><span class="bpz-aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span><p>Специалисты, готовящиеся к проверкам и взаимодействию с контрольными органами</p></div>
+    </div>
+    <div class="bpz-org-note bpz-reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <p>Особенно важно для организаций, где бюджетный блок и закупочный блок существуют отдельно, но должны работать синхронно.</p>
     </div>
   </div>
 </section>
@@ -532,9 +546,9 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
       </div>
       <div class="bpz-pain-list bpz-reveal">
         <div class="bpz-pain"><span class="bpz-pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>Бюджет довели с опозданием, а закупка уже запланирована</p></div>
-        <div class="bpz-pain"><span class="bpz-pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>Обязательство приняли раньше доступа к ЛБО</p></div>
+        <div class="bpz-pain"><span class="bpz-pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>Обязательство приняли раньше, чем появились лимиты</p></div>
         <div class="bpz-pain"><span class="bpz-pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>Контракт исполнили с нарушением логики учёта</p></div>
-        <div class="bpz-pain"><span class="bpz-pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>План закупок не синхронизирован с реальными лимитами</p></div>
+        <div class="bpz-pain"><span class="bpz-pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>Платёж завис — и непонятно, где и почему</p></div>
       </div>
     </div>
   </div>
@@ -550,15 +564,15 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
       <h2 class="bpz-h2">Работающая схема, а не набор теории</h2>
     </div>
     <div class="bpz-outcomes-grid bpz-reveal">
-      <div class="bpz-outcome"><span class="bpz-outcome__num">1</span><p>Ясно понимать, как устроен бюджетный процесс и где в нём находится закупка.</p></div>
-      <div class="bpz-outcome"><span class="bpz-outcome__num">2</span><p>Правильно работать с ЛБО и бюджетными обязательствами, избегая типовых ошибок.</p></div>
-      <div class="bpz-outcome"><span class="bpz-outcome__num">3</span><p>Синхронизировать планирование закупок с бюджетными ограничениями.</p></div>
-      <div class="bpz-outcome"><span class="bpz-outcome__num">4</span><p>Видеть риски до того, как они превращаются в нарушение.</p></div>
-      <div class="bpz-outcome" style="grid-column:1/-1"><span class="bpz-outcome__num">5</span><p>Готовиться к проверкам и взаимодействовать с контролёрами на одном языке.</p></div>
+      <div class="bpz-outcome"><span class="bpz-outcome__num">1</span><p>Понимать, как устроено казначейское обслуживание и что происходит на лицевых счетах учреждения.</p></div>
+      <div class="bpz-outcome"><span class="bpz-outcome__num">2</span><p>Видеть связь закупки с лимитами и планом ПФХД ещё на этапе планирования.</p></div>
+      <div class="bpz-outcome"><span class="bpz-outcome__num">3</span><p>Проходить блокирующий контроль целевого расходования средств без сюрпризов.</p></div>
+      <div class="bpz-outcome"><span class="bpz-outcome__num">4</span><p>Правильно вести исполнение контракта: обязательство, приёмка, оплата.</p></div>
+      <div class="bpz-outcome" style="grid-column:1/-1"><span class="bpz-outcome__num">5</span><p>Понимать, как работает система казначейских платежей и от чего зависят сроки оплаты.</p></div>
     </div>
     <div class="bpz-result-banner bpz-reveal">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-      <p><b>Итог:</b> работающая схема от планирования бюджета до казначейского платежа и прохождения контроля.</p>
+      <p><b>Итог:</b> целостная картина пути бюджетных денег — от лицевого счёта до платежа поставщику.</p>
     </div>
   </div>
 </section>
@@ -570,46 +584,46 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
   <div class="bpz-wrap">
     <div class="bpz-section-head bpz-reveal">
       <span class="bpz-eyebrow">Формат курса</span>
-      <h2 class="bpz-h2">Пять практических разборов в единой программе</h2>
+      <h2 class="bpz-h2">Три занятия в формате практических разборов</h2>
     </div>
     <div class="bpz-fmt-grid bpz-reveal">
-      <div class="bpz-fmt-card"><div class="bpz-fmt-card__big">5</div><div class="bpz-fmt-card__lbl">вебинаров</div><p>Тематические вебинары в формате практических разборов.</p></div>
-      <div class="bpz-fmt-card"><div class="bpz-fmt-card__big">5</div><div class="bpz-fmt-card__lbl">модулей</div><p>Каждый вебинар — отдельный модуль, но вместе они образуют единую программу.</p></div>
-      <div class="bpz-fmt-card"><div class="bpz-fmt-card__big">∞</div><div class="bpz-fmt-card__lbl">доступ к записям</div><p>Кейсы, типовые ошибки, реальные ситуации и решения под регуляторику РФ.</p></div>
+      <div class="bpz-fmt-card"><div class="bpz-fmt-card__big">3</div><div class="bpz-fmt-card__lbl">занятия</div><p>Тематические вебинары: кейсы, типовые ошибки и решения под регуляторику РФ.</p></div>
+      <div class="bpz-fmt-card"><div class="bpz-fmt-card__big">1</div><div class="bpz-fmt-card__lbl">единая программа</div><p>Каждое занятие — отдельная тема, но вместе они образуют цельный путь от бюджета до платежа.</p></div>
+      <div class="bpz-fmt-card"><div class="bpz-fmt-card__big">∞</div><div class="bpz-fmt-card__lbl">доступ к записям</div><p>Записи остаются доступны после эфиров — можно вернуться к любой теме.</p></div>
     </div>
     <div class="bpz-fmt-note bpz-reveal">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
-      <span><b>Формат:</b> онлайн, с возможностью последующего доступа к записям.</span>
+      <span><b>Формат:</b> онлайн, с возможностью последующего доступа к записям. Занятия можно проходить и по отдельности.</span>
     </div>
   </div>
 </section>
 <!-- ═════════ конец БЛОКА 7 ═════════ -->
 
 
-<!-- ═════════ ✂ БЛОК 8. ПРОГРАММА (аккордеон) ═════════ -->
+<!-- ═════════ ✂ БЛОК 8. ПРОГРАММА (аккордеон, 3 занятия) ═════════ -->
 <section class="bpz-sec bpz-section" id="bpz-program">
   <div class="bpz-wrap">
     <div class="bpz-section-head bpz-reveal">
       <span class="bpz-eyebrow">Программа курса</span>
-      <h2 class="bpz-h2">Пять модулей — от бюджетного процесса до проверки</h2>
-      <p class="bpz-lead" style="margin-top:18px">Нажмите на модуль, чтобы раскрыть содержание.</p>
+      <h2 class="bpz-h2">Три занятия — путь бюджетных денег от плана до платежа</h2>
+      <p class="bpz-lead" style="margin-top:18px">Нажмите на занятие, чтобы раскрыть содержание. Каждое занятие можно пройти отдельно.</p>
     </div>
     <div class="bpz-modules bpz-reveal">
       <details class="bpz-module" open>
         <summary class="bpz-module__head">
           <span class="bpz-module__no">01</span>
           <span class="bpz-module__titles">
-            <span class="bpz-module__title">Бюджетный процесс и казначейское обслуживание</span>
-            <span class="bpz-module__sub">Где закупка находится в бюджетном процессе — на практике</span>
+            <span class="bpz-module__title">Бюджетный процесс для закупщика</span>
+            <span class="bpz-module__sub">Казначейское обслуживание, лицевые счета и роль финансовых органов</span>
           </span>
+          <span class="bpz-module__price">3&nbsp;000&nbsp;₽</span>
           <span class="bpz-module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
         <div class="bpz-module__body">
           <ul>
             <li>Учреждение в системе казначейского обслуживания: особенности для КУ и БУ</li>
             <li>Роль Казначейства России и финансовых органов</li>
-            <li>Типы лицевых счетов по типам учреждений и их связь с бюджетными данными</li>
-            <li>Бюджетная классификация (КБК) и где возникают ключевые риски на старте</li>
+            <li>Типы лицевых счетов в зависимости от типа учреждения и связь с бюджетными данными</li>
           </ul>
         </div>
       </details>
@@ -617,25 +631,17 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
         <summary class="bpz-module__head">
           <span class="bpz-module__no">02</span>
           <span class="bpz-module__titles">
-            <span class="bpz-module__title">ЛБО, планирование закупок и блокирующий контроль</span>
-            <span class="bpz-module__sub">Как не допустить расхождений между лимитами и закупками</span>
+            <span class="bpz-module__title">Планирование и осуществление закупок</span>
+            <span class="bpz-module__sub">Блокирующий контроль целевого расходования бюджетных средств</span>
           </span>
+          <span class="bpz-module__price">3&nbsp;000&nbsp;₽</span>
           <span class="bpz-module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
         <div class="bpz-module__body">
           <ul>
-            <li>ЛБО и лимиты / ПФХД на лицевых счетах: доведение и распределение</li>
-            <li>Связь плана закупок, ПФХД и бюджета; обоснование и синхронизация сроков</li>
-            <li>Извещение и связь с принимаемым обязательством; перечень финансовых контролей (особенности БУ)</li>
-            <li>Блокирующий контроль целевого расходования бюджетных средств</li>
-            <li>Типовые ошибки заказчиков:
-              <ul class="bpz-sub-ul">
-                <li>закупка без достаточных лимитов</li>
-                <li>некорректная детализация</li>
-                <li>несоответствие КБК</li>
-              </ul>
-            </li>
-            <li>Кейсы: «план есть — денег нет» и «деньги есть — закупка не запланирована»</li>
+            <li>Связь с лимитами или планом ПФХД на лицевых счетах</li>
+            <li>Извещение и связь с принимаемым обязательством; перечень финансовых контролей и особенности для БУ</li>
+            <li>Контроль целевого расходования средств</li>
           </ul>
         </div>
       </details>
@@ -643,34 +649,10 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
         <summary class="bpz-module__head">
           <span class="bpz-module__no">03</span>
           <span class="bpz-module__titles">
-            <span class="bpz-module__title">Исполнение контракта и денежные обязательства</span>
-            <span class="bpz-module__sub">Принятие обязательств, приёмка, кассовое исполнение — тонкости БУ и АУ</span>
+            <span class="bpz-module__title">Исполнение контракта и его оплата</span>
+            <span class="bpz-module__sub">Что такое система казначейских платежей</span>
           </span>
-          <span class="bpz-module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
-        </summary>
-        <div class="bpz-module__body">
-          <ul>
-            <li>Контракт и бюджетное обязательство: какие тонкости на этом этапе</li>
-            <li>Документ о приёмке: его роль в бюджетном процессе и связь с бухгалтерским учётом</li>
-            <li>Автосанкция денежных обязательств и что нужно сделать, чтобы всё прошло без ошибок</li>
-            <li>Кассовое исполнение; последствия изменений, переносов и расторжений контрактов</li>
-            <li>Риски:
-              <ul class="bpz-sub-ul">
-                <li>превышение лимитов</li>
-                <li>нецелевое использование</li>
-                <li>кассовые разрывы</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </details>
-      <details class="bpz-module">
-        <summary class="bpz-module__head">
-          <span class="bpz-module__no">04</span>
-          <span class="bpz-module__titles">
-            <span class="bpz-module__title">Платёж и система казначейских платежей</span>
-            <span class="bpz-module__sub">Как деньги доходят до поставщика — и от чего зависят сроки</span>
-          </span>
+          <span class="bpz-module__price">3&nbsp;000&nbsp;₽</span>
           <span class="bpz-module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
         <div class="bpz-module__body">
@@ -681,62 +663,44 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
           </ul>
         </div>
       </details>
-      <details class="bpz-module">
-        <summary class="bpz-module__head">
-          <span class="bpz-module__no">05</span>
-          <span class="bpz-module__titles">
-            <span class="bpz-module__title">Финансовый контроль и матрица контролей</span>
-            <span class="bpz-module__sub">Как смотрят проверяющие и где чаще всего «ловят»</span>
-          </span>
-          <span class="bpz-module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
-        </summary>
-        <div class="bpz-module__body">
-          <div class="bpz-guest">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg>
-            <span>Модуль с участием <b>Юлии Обаляевой</b></span>
-          </div>
-          <ul>
-            <li>Кто и как проверяет закупки с точки зрения бюджета; логика контрольных органов</li>
-            <li>Типовые нарушения:
-              <ul class="bpz-sub-ul">
-                <li>несоответствие ЛБО</li>
-                <li>ошибки в обосновании</li>
-                <li>нарушения при исполнении контрактов</li>
-              </ul>
-            </li>
-            <li>Как подготовиться к проверке и рекомендации по снижению рисков</li>
-            <li><b>Матрица всех бюджетных и финансовых контролей</b> на всех этапах закупки — от планирования до платежа</li>
-          </ul>
-        </div>
-      </details>
     </div>
   </div>
 </section>
 <!-- ═════════ конец БЛОКА 8 ═════════ -->
 
 
-<!-- ═════════ ✂ БЛОК 9. ИТОГОВЫЙ РЕЗУЛЬТАТ ═════════ -->
-<section class="bpz-sec bpz-section bpz-result" id="bpz-result">
+<!-- ═════════ ✂ БЛОК 9. СТОИМОСТЬ ═════════ -->
+<section class="bpz-sec bpz-section bpz-price" id="bpz-price">
   <div class="bpz-wrap">
     <div class="bpz-section-head bpz-reveal">
-      <span class="bpz-eyebrow">Итоговый результат</span>
-      <h2 class="bpz-h2">Единая рабочая схема вместо разрозненных блоков</h2>
+      <span class="bpz-eyebrow">Стоимость</span>
+      <h2 class="bpz-h2">Весь курс или отдельные занятия — на выбор</h2>
     </div>
-    <div class="bpz-chain bpz-reveal">
-      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Планирование бюджета</h4><p>Отправная точка системы</p></div>
-      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Доведение ЛБО</h4><p>Лимиты и обязательства</p></div>
-      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Планирование и исполнение закупок</h4><p>Синхронно с бюджетом</p></div>
-      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Казначейский платёж</h4><p>Доведение до денег</p></div>
-      <div class="bpz-chain__step"><span class="bpz-chain__num"></span><h4>Учёт, контроль, матрица</h4><p>Готовность к проверке</p></div>
+    <div class="bpz-price-grid bpz-reveal">
+      <div class="bpz-price-card bpz-price-card--hl">
+        <div class="bpz-price-card__lbl">Весь курс</div>
+        <div class="bpz-price-card__val">9&nbsp;000&nbsp;₽</div>
+        <div class="bpz-price-card__per">три занятия единой программой</div>
+        <ul class="bpz-price-card__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Все 3 занятия курса</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Доступ к записям после эфиров</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Единая логика: от бюджета до платежа</li>
+        </ul>
+        <a href="#bpz-register" class="bpz-btn bpz-btn--primary bpz-btn--lg bpz-btn--block">Записаться на курс</a>
+      </div>
+      <div class="bpz-price-card">
+        <div class="bpz-price-card__lbl">Отдельное занятие</div>
+        <div class="bpz-price-card__val">3&nbsp;000&nbsp;₽</div>
+        <div class="bpz-price-card__per">за одно занятие</div>
+        <ul class="bpz-price-card__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Любое занятие на выбор</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Доступ к записи занятия</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Тема целиком за один вебинар</li>
+        </ul>
+        <a href="#bpz-register" class="bpz-btn bpz-btn--ghost bpz-btn--lg bpz-btn--block">Выбрать занятие</a>
+      </div>
     </div>
-    <div class="bpz-result-banner bpz-reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
-      <p><b>На выходе — матрица всех контролей:</b> кто, что и на каком этапе проверяет — от планирования до казначейского платежа.</p>
-    </div>
-    <div class="bpz-result__note bpz-reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 16v-4M12 8h.01"/></svg>
-      <p>Особенно важно для организаций, где бюджетный блок и закупочный блок существуют отдельно, но должны работать синхронно.</p>
-    </div>
+    <p class="bpz-price-note bpz-reveal">Запись на весь курс и на отдельные занятия — через форму ниже: укажите в заявке нужный вариант.</p>
   </div>
 </section>
 <!-- ═════════ конец БЛОКА 9 ═════════ -->
@@ -760,7 +724,7 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
         <div class="bpz-sp-block">
           <h4>Экспертиза</h4>
           <ul>
-            <li>Бюджетное планирование и доведение ЛБО</li>
+            <li>Бюджетное планирование и доведение лимитов</li>
             <li>Связь бюджетного процесса и контрактной системы (44-ФЗ)</li>
             <li>Финансовый контроль и предотвращение нарушений при закупках</li>
             <li>Взаимодействие финансовых органов и заказчиков</li>
@@ -800,7 +764,7 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
       <div class="bpz-ben">
         <div class="bpz-ben__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M3 20h2M5 20V8a7 7 0 0114 0v12"/><path d="M9 13l2 2 4-4"/></svg></div>
         <h4>Практика, а не теория</h4>
-        <p>Каждый модуль — разбор реальных ситуаций и готовых решений.</p>
+        <p>Каждое занятие — разбор реальных ситуаций и готовых решений.</p>
       </div>
       <div class="bpz-ben">
         <div class="bpz-ben__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
@@ -820,7 +784,8 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
 
 <!-- ═════════ ✂ БЛОК 12. ЗАПИСЬ (тёмный призыв) ═════════
      СРАЗУ ПОСЛЕ этого блока вставьте нативный блок «Форма» ГетКурса —
-     заявки будут попадать в CRM и запускать процессы. ═════════ -->
+     заявки будут попадать в CRM и запускать процессы. В форме дайте выбор:
+     «Весь курс — 9 000 ₽» или «Занятие 1 / 2 / 3 — 3 000 ₽». ═════════ -->
 <section class="bpz-sec bpz-section bpz-register" id="bpz-register">
   <div class="bpz-register__grid-bg"></div>
   <div class="bpz-wrap">
@@ -831,11 +796,11 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
         <div class="bpz-want"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Снизить риск нарушений и претензий</div>
         <div class="bpz-want"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Выстроить прозрачную связку бюджета и закупок</div>
         <div class="bpz-want"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Говорить с финансовым контролем и закупочным блоком на одном языке</div>
-        <div class="bpz-want"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Получить работающую систему, а не набор разрозненных знаний</div>
+        <div class="bpz-want"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Понимать путь платежа — от распоряжения до денег у поставщика</div>
       </div>
       <div class="bpz-microcta">
         <span class="bpz-pulse"></span>
-        <span><b>Регистрация открыта.</b> Количество мест ограничено — заполните форму ниже, чтобы гарантировать участие.</span>
+        <span><b>Регистрация открыта.</b> Весь курс — 9&nbsp;000&nbsp;₽, отдельное занятие — 3&nbsp;000&nbsp;₽. Заполните форму ниже, чтобы гарантировать участие.</span>
       </div>
     </div>
   </div>
@@ -859,13 +824,13 @@ html.bpz-js .bpz-reveal.bpz-on{opacity:1;transform:none}
         <a href="#bpz-offer">О курсе</a>
         <a href="#bpz-audience">Для кого</a>
         <a href="#bpz-program">Программа</a>
-        <a href="#bpz-format">Формат</a>
+        <a href="#bpz-price">Стоимость</a>
         <a href="#bpz-speaker">Спикер</a>
         <a href="#bpz-register">Записаться</a>
       </div>
     </div>
     <div class="bpz-footer__bottom">
-      <span>© АО «Сбербанк-АСТ», Электронный университет. Курс «Бюджет и закупки без разрывов».</span>
+      <span>© АО «Сбербанк-АСТ», Электронный университет. Курс «Бюджетное окружение процесса закупок. Просто о сложном».</span>
       <span class="bpz-footer__credit">Разработано в лаборатории <a href="https://t.me/tickettotender" target="_blank" rel="noopener">«Тендеры ex machina»</a></span>
     </div>
   </div>

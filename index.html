@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Бюджет и закупки без разрывов — курс АО «Сбербанк-АСТ»</title>
-<meta name="description" content="Практический курс для заказчиков и финансовых специалистов на стыке 44-ФЗ и бюджетного процесса. Сквозная логика: от бюджета и казначейского обслуживания через ЛБО, планирование и исполнение — до казначейского платежа, финансового контроля и матрицы всех контролей.">
+<title>Бюджетное окружение процесса закупок — курс АО «Сбербанк-АСТ»</title>
+<meta name="description" content="Просто о сложном: практический курс для заказчиков и финансовых специалистов на стыке 44-ФЗ и бюджетного процесса. 3 занятия: бюджетный процесс и казначейское обслуживание, планирование закупок и блокирующий контроль, исполнение контракта и казначейские платежи. 9 000 ₽ за курс или 3 000 ₽ за занятие.">
 <meta name="theme-color" content="#14161d">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Бюджет и закупки без разрывов — от планирования до контроля">
-<meta property="og:description" content="Практический курс АО «Сбербанк-АСТ». Сквозная система: бюджет и казначейство → ЛБО и планирование → исполнение и приёмка → казначейский платёж → контроль и матрица.">
+<meta property="og:title" content="Бюджетное окружение процесса закупок. Просто о сложном">
+<meta property="og:description" content="Практический курс АО «Сбербанк-АСТ». 3 занятия: бюджетный процесс → планирование и блокирующий контроль → исполнение контракта и казначейский платёж. 9 000 ₽ за курс, 3 000 ₽ за занятие.">
 <meta property="og:locale" content="ru_RU">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,6 @@
 :root{
   --ink:#14161d;
   --ink-2:#1b1e28;
-  --ink-3:#232734;
   --paper:#ffffff;
   --cream:#f5f6f3;
   --cream-2:#eef0ea;
@@ -35,7 +34,6 @@
   --warn-soft:#fbeee9;
   --maxw:1200px;
   --radius:16px;
-  --radius-sm:10px;
   --shadow:0 1px 2px rgba(20,22,29,.04),0 8px 30px rgba(20,22,29,.06);
   --shadow-lg:0 30px 70px -25px rgba(20,22,29,.35);
   --ease:cubic-bezier(.22,.61,.36,1);
@@ -59,8 +57,7 @@ img{max-width:100%}
 
 .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 28px}
 .section{padding:104px 0;position:relative}
-.section--tight{padding:84px 0}
-@media(max-width:860px){.section{padding:68px 0}.section--tight{padding:56px 0}}
+@media(max-width:860px){.section{padding:68px 0}}
 
 .eyebrow{
   display:inline-flex;align-items:center;gap:9px;
@@ -89,8 +86,6 @@ img{max-width:100%}
 .btn--primary:hover{background:var(--accent-2);transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(14,138,82,.8)}
 .btn--ghost{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn--ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
-.btn--light{background:#fff;color:var(--ink)}
-.btn--light:hover{transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(0,0,0,.5)}
 .btn--lg{padding:19px 38px;font-size:17px}
 .btn--block{width:100%}
 
@@ -101,7 +96,6 @@ img{max-width:100%}
 .brand{display:flex;align-items:center;gap:13px;color:#fff;transition:color .3s var(--ease)}
 .header.scrolled .brand{color:var(--ink)}
 .brand__mark{width:38px;height:38px;border-radius:9px;background:var(--ink);display:grid;place-items:center;flex:none;transition:background .3s var(--ease)}
-.header.scrolled .brand__mark{background:var(--ink)}
 .brand__mark span{width:16px;height:16px;border-radius:4px;background:var(--accent)}
 .brand__txt{display:flex;flex-direction:column;line-height:1.05}
 .brand__name{font-weight:800;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
@@ -141,7 +135,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
 .hero .wrap{position:relative;z-index:2}
 .hero__inner{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
 @media(max-width:980px){.hero__inner{grid-template-columns:1fr;gap:48px}}
-.hero h1{font-size:clamp(40px,6.4vw,76px);line-height:1.02;letter-spacing:-.03em;color:#fff}
+.hero h1{font-size:clamp(36px,5.6vw,64px);line-height:1.04;letter-spacing:-.03em;color:#fff}
 .hero__sub{display:block;font-size:clamp(22px,3.2vw,34px);font-weight:600;color:#5fd29a;margin-top:14px;letter-spacing:-.02em}
 .hero__desc{margin-top:28px;font-size:clamp(16px,2vw,19px);color:rgba(255,255,255,.72);max-width:560px;line-height:1.6}
 .hero__actions{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
@@ -163,8 +157,8 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
 
 /* ===== Offer / chain ===== */
 .offer{background:var(--cream)}
-.chain{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:46px 0 8px;counter-reset:step}
-@media(max-width:980px){.chain{grid-template-columns:1fr;gap:0}}
+.chain{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:46px 0 8px;counter-reset:step}
+@media(max-width:760px){.chain{grid-template-columns:1fr;gap:0}}
 .chain__step{position:relative;padding:30px 26px;background:var(--paper);border:1px solid var(--line);counter-increment:step}
 .chain__step:first-child{border-radius:var(--radius) 0 0 var(--radius)}
 .chain__step:last-child{border-radius:0 var(--radius) var(--radius) 0}
@@ -173,17 +167,16 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
 .chain__step:last-child::after{display:none}
 .chain__num{font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.1em}
 .chain__num::before{content:"0" counter(step)}
-.chain__step h4{font-size:17px;margin-top:12px;letter-spacing:-.01em}
+.chain__step h4{font-size:18px;margin-top:12px;letter-spacing:-.01em}
 .chain__step p{font-size:14px;color:var(--muted);margin-top:7px}
-@media(max-width:980px){
+@media(max-width:760px){
   .chain__step{border-radius:0!important;border-left:1px solid var(--line)!important}
   .chain__step:first-child{border-radius:var(--radius) var(--radius) 0 0!important}
   .chain__step:last-child{border-radius:0 0 var(--radius) var(--radius)!important}
   .chain__step:not(:first-child){border-top:none}
   .chain__step::after{right:auto;left:50%;top:auto;bottom:-11px;transform:translateX(-50%) rotate(135deg)}
 }
-.offer__cols{display:grid;grid-template-columns:1fr;gap:18px;margin-top:48px}
-.checklist{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.checklist{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
 @media(max-width:860px){.checklist{grid-template-columns:1fr}}
 .check-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
 .check-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d4d8cf}
@@ -200,6 +193,8 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
 .aud-item:hover .aud-item__ic{background:var(--accent);color:#fff}
 .aud-item__ic svg{width:22px;height:22px}
 .aud-item p{font-size:16px;font-weight:600;color:var(--text);line-height:1.45;padding-top:8px}
+.org-note{margin-top:30px;padding:26px 30px;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);font-size:16px;color:var(--text);line-height:1.6;display:flex;gap:18px;align-items:flex-start}
+.org-note svg{width:26px;height:26px;color:var(--accent);flex:none;margin-top:2px}
 
 /* ===== Why now (problem) ===== */
 .why{background:var(--ink);color:#fff}
@@ -245,11 +240,14 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
 .modules{display:flex;flex-direction:column;gap:18px}
 .module{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:box-shadow .3s var(--ease),border-color .3s var(--ease)}
 .module:hover{box-shadow:var(--shadow);border-color:#d4d8cf}
-.module__head{display:flex;align-items:center;gap:22px;width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:26px 30px;font-family:var(--ff)}
+.module__head{display:flex;align-items:center;gap:22px;width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:26px 30px;font-family:var(--ff);list-style:none}
+.module__head::-webkit-details-marker{display:none}
 .module__no{font-size:14px;font-weight:800;color:var(--accent);letter-spacing:.1em;flex:none;width:54px}
 .module__titles{flex:1;min-width:0}
 .module__title{display:block;font-size:20px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
 .module__sub{display:block;font-size:14.5px;color:var(--muted);margin-top:6px;font-style:italic}
+.module__price{flex:none;padding:7px 14px;border-radius:50px;background:var(--accent-soft);color:var(--accent-2);font-size:13.5px;font-weight:800;white-space:nowrap}
+@media(max-width:640px){.module__price{display:none}}
 .module__toggle{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:background .3s var(--ease),transform .3s var(--ease),border-color .3s var(--ease)}
 .module__toggle svg{width:18px;height:18px;color:var(--ink);transition:transform .3s var(--ease)}
 .module[open] .module__toggle{background:var(--accent);border-color:var(--accent)}
@@ -259,18 +257,27 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
 .module__body ul{display:flex;flex-direction:column;gap:11px;border-top:1px solid var(--line);padding-top:22px}
 .module__body li{position:relative;padding-left:26px;font-size:15.5px;color:var(--text);line-height:1.5}
 .module__body li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--accent)}
-.module__body .sub-ul{margin-top:11px;padding-top:0;border:none;padding-left:26px;gap:8px}
-.module__body .sub-ul li{font-size:14.5px;color:var(--muted);padding-left:20px}
-.module__body .sub-ul li::before{width:5px;height:5px;border-radius:50%;background:var(--muted-2);top:9px}
-.guest{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding:12px 16px;background:var(--accent-tint);border-left:3px solid var(--accent);border-radius:0 8px 8px 0}
-.guest svg{width:18px;height:18px;color:var(--accent);flex:none}
-.guest span{font-size:14.5px;color:var(--ink)}
-.guest b{font-weight:800}
 
-/* ===== Result chain ===== */
-.result{background:var(--cream)}
-.result__note{margin-top:42px;padding:26px 30px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);font-size:16.5px;color:var(--text);line-height:1.6;display:flex;gap:18px;align-items:flex-start}
-.result__note svg{width:26px;height:26px;color:var(--accent);flex:none;margin-top:2px}
+/* ===== Price ===== */
+.price{background:var(--cream)}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:920px}
+@media(max-width:760px){.price-grid{grid-template-columns:1fr}}
+.price-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:38px 34px;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.price-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.price-card--hl{background:var(--ink);border-color:var(--ink);color:#fff}
+.price-card__lbl{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:16px}
+.price-card--hl .price-card__lbl{color:#5fd29a}
+.price-card__val{font-size:46px;font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1}
+.price-card--hl .price-card__val{color:#fff}
+.price-card__per{font-size:14.5px;color:var(--muted);margin-top:8px}
+.price-card--hl .price-card__per{color:rgba(255,255,255,.6)}
+.price-card__list{margin:26px 0 30px;display:flex;flex-direction:column;gap:12px}
+.price-card__list li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.5;color:var(--text)}
+.price-card--hl .price-card__list li{color:rgba(255,255,255,.88)}
+.price-card__list svg{width:20px;height:20px;color:var(--accent);flex:none;margin-top:1px}
+.price-card--hl .price-card__list svg{color:#5fd29a}
+.price-card .btn{margin-top:auto}
+.price-note{margin-top:22px;font-size:14.5px;color:var(--muted)}
 
 /* ===== Speaker ===== */
 .speaker__card{display:grid;grid-template-columns:300px 1fr;gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--paper)}
@@ -325,7 +332,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
 .form-card{background:var(--paper);border-radius:24px;padding:38px 36px;box-shadow:var(--shadow-lg);color:var(--text)}
 @media(max-width:640px){.form-card{padding:30px 24px}}
 .form-card h3{font-size:23px;letter-spacing:-.02em;margin-bottom:6px}
-.form-card>p{font-size:14.5px;color:var(--muted);margin-bottom:26px}
+.form-card>div>p{font-size:14.5px;color:var(--muted);margin-bottom:26px}
 .field{margin-bottom:16px}
 .field label{display:block;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:8px}
 .field input,.field select{width:100%;font-family:var(--ff);font-size:15.5px;padding:14px 16px;border:1px solid var(--line);border-radius:11px;background:var(--cream);color:var(--text);transition:border-color .2s var(--ease),background .2s var(--ease),box-shadow .2s var(--ease)}
@@ -393,13 +400,13 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
         <a href="#offer">О курсе</a>
         <a href="#audience">Для кого</a>
         <a href="#program">Программа</a>
-        <a href="#format">Формат</a>
+        <a href="#price">Стоимость</a>
         <a href="#speaker">Спикер</a>
       </div>
       <div class="nav__cta">
         <a href="#program" class="btn btn--ghost">Программа</a>
         <a href="#register" class="btn btn--primary">Записаться</a>
-        <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span></button>
+        <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" type="button"><span></span></button>
       </div>
     </nav>
   </div>
@@ -409,7 +416,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
   <a href="#offer">О курсе</a>
   <a href="#audience">Для кого</a>
   <a href="#program">Программа</a>
-  <a href="#format">Формат</a>
+  <a href="#price">Стоимость</a>
   <a href="#speaker">Спикер</a>
   <a href="#register" class="btn btn--primary btn--lg btn--block">Записаться на курс</a>
 </div>
@@ -422,7 +429,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
     <div class="hero__inner">
       <div>
         <span class="eyebrow eyebrow--light">АО «Сбербанк-АСТ» · Электронный университет</span>
-        <h1>Бюджет и закупки без&nbsp;разрывов<span class="hero__sub">от планирования до контроля</span></h1>
+        <h1>Бюджетное окружение процесса закупок<span class="hero__sub">просто о сложном</span></h1>
         <p class="hero__desc">Практический курс для заказчиков и финансовых специалистов, работающих на стыке 44-ФЗ и бюджетного процесса.</p>
         <div class="hero__actions">
           <a href="#register" class="btn btn--primary btn--lg">Записаться на курс
@@ -431,20 +438,18 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
           <a href="#program" class="btn btn--ghost btn--lg" style="color:#fff;border-color:rgba(255,255,255,.25)">Смотреть программу</a>
         </div>
         <div class="hero__chips">
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>5 вебинаров</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16"/></svg>5 модулей</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>3 занятия</span>
           <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M12 7v5l3 2"/></svg>Онлайн + доступ к записям</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V8a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h14a2 2 0 002-2v-4zm0 0h-6a2 2 0 000 4h6"/></svg>9&nbsp;000&nbsp;₽ за весь курс</span>
         </div>
       </div>
       <div class="flow-card reveal">
-        <div class="flow-card__title">Единая логика курса</div>
-        <div class="flow-card__head">Сквозная логика: от бюджета — до казначейского платежа</div>
+        <div class="flow-card__title">Логика курса</div>
+        <div class="flow-card__head">Три занятия — весь путь бюджетных денег в закупке</div>
         <div class="vflow">
-          <div class="vflow__item"><span class="vflow__dot">1</span><span class="vflow__txt"><b>Бюджет и казначейство</b><span>лицевые счета, КУ / БУ / АУ</span></span></div>
-          <div class="vflow__item"><span class="vflow__dot">2</span><span class="vflow__txt"><b>ЛБО и планирование</b><span>лимиты, ПФХД, обязательства</span></span></div>
-          <div class="vflow__item"><span class="vflow__dot">3</span><span class="vflow__txt"><b>Исполнение и приёмка</b><span>денежные обязательства</span></span></div>
-          <div class="vflow__item"><span class="vflow__dot">4</span><span class="vflow__txt"><b>Казначейский платёж</b><span>распоряжение и сроки</span></span></div>
-          <div class="vflow__item"><span class="vflow__dot">5</span><span class="vflow__txt"><b>Контроль и матрица</b><span>все контроли от плана до платежа</span></span></div>
+          <div class="vflow__item"><span class="vflow__dot">1</span><span class="vflow__txt"><b>Бюджетный процесс</b><span>казначейское обслуживание, лицевые счета</span></span></div>
+          <div class="vflow__item"><span class="vflow__dot">2</span><span class="vflow__txt"><b>Планирование и контроль</b><span>лимиты, ПФХД, целевое расходование</span></span></div>
+          <div class="vflow__item"><span class="vflow__dot">3</span><span class="vflow__txt"><b>Исполнение и оплата</b><span>контракт и казначейский платёж</span></span></div>
         </div>
       </div>
     </div>
@@ -457,31 +462,27 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
     <div class="section-head reveal">
       <span class="eyebrow">Главный оффер</span>
       <h2 class="h2">Курс, который выстроит для вас единую&nbsp;логику</h2>
-      <p class="lead" style="margin-top:18px">От бюджета и казначейского обслуживания — к ЛБО и планированию, к исполнению контракта и денежным обязательствам, к казначейскому платежу и финансовому контролю. Не разрозненные нормы, а целостная система от плана до платежа.</p>
+      <p class="lead" style="margin-top:18px">От бюджетного процесса и казначейского обслуживания — к планированию закупок и блокирующему контролю, к исполнению контракта и казначейскому платежу. Просто — о сложном.</p>
     </div>
 
     <div class="chain reveal">
-      <div class="chain__step"><span class="chain__num"></span><h4>Бюджет и казначейство</h4><p>Лицевые счета, классификация</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>ЛБО и планирование</h4><p>Лимиты, ПФХД, обязательства</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>Исполнение и приёмка</h4><p>Денежные обязательства</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>Платёж</h4><p>Казначейские платежи</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>Контроль и матрица</h4><p>Все контроли от плана до платежа</p></div>
+      <div class="chain__step"><span class="chain__num"></span><h4>Бюджетный процесс</h4><p>Казначейство, лицевые счета, финорганы</p></div>
+      <div class="chain__step"><span class="chain__num"></span><h4>Планирование и контроль</h4><p>Лимиты, ПФХД, целевое расходование</p></div>
+      <div class="chain__step"><span class="chain__num"></span><h4>Исполнение и оплата</h4><p>Контракт и казначейские платежи</p></div>
     </div>
 
-    <div class="offer__cols reveal">
-      <div class="checklist">
-        <div class="check-card">
-          <div class="check-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
-          <p>Системное понимание, как бюджетные средства реально движутся в закупке.</p>
-        </div>
-        <div class="check-card">
-          <div class="check-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="3"/></svg></div>
-          <p>Чёткую схему, как не допустить разрывов между лимитами и закупками.</p>
-        </div>
-        <div class="check-card">
-          <div class="check-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <p>Практические инструменты снижения контрольных рисков.</p>
-        </div>
+    <div class="checklist reveal">
+      <div class="check-card">
+        <div class="check-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+        <p>Системное понимание, как бюджетные средства реально движутся в закупке.</p>
+      </div>
+      <div class="check-card">
+        <div class="check-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="3"/></svg></div>
+        <p>Чёткую схему, как не допустить разрывов между лимитами и закупками.</p>
+      </div>
+      <div class="check-card">
+        <div class="check-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <p>Практические инструменты снижения контрольных рисков.</p>
       </div>
     </div>
   </div>
@@ -498,9 +499,13 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
     <div class="aud-grid reveal">
       <div class="aud-item"><span class="aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span><p>Заказчики по 44-ФЗ и их руководители</p></div>
       <div class="aud-item"><span class="aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span><p>Специалисты финансовых служб и управлений бюджетного контроля</p></div>
-      <div class="aud-item"><span class="aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></span><p>Сотрудники, отвечающие за ЛБО и бюджетные обязательства</p></div>
+      <div class="aud-item"><span class="aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></span><p>Сотрудники, отвечающие за лимиты и бюджетные обязательства</p></div>
       <div class="aud-item"><span class="aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7"/></svg></span><p>Те, кто согласует план закупок с бюджетными ограничениями</p></div>
       <div class="aud-item" style="grid-column:1/-1"><span class="aud-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span><p>Специалисты, готовящиеся к проверкам и взаимодействию с контрольными органами</p></div>
+    </div>
+    <div class="org-note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <p>Особенно важно для организаций, где бюджетный блок и закупочный блок существуют отдельно, но должны работать синхронно.</p>
     </div>
   </div>
 </section>
@@ -518,9 +523,9 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
       </div>
       <div class="pain-list reveal">
         <div class="pain"><span class="pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>Бюджет довели с опозданием, а закупка уже запланирована</p></div>
-        <div class="pain"><span class="pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>Обязательство приняли раньше доступа к ЛБО</p></div>
+        <div class="pain"><span class="pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>Обязательство приняли раньше, чем появились лимиты</p></div>
         <div class="pain"><span class="pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>Контракт исполнили с нарушением логики учёта</p></div>
-        <div class="pain"><span class="pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>План закупок не синхронизирован с реальными лимитами</p></div>
+        <div class="pain"><span class="pain__x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg></span><p>Платёж завис — и непонятно, где и почему</p></div>
       </div>
     </div>
   </div>
@@ -534,15 +539,15 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
       <h2 class="h2">Работающая схема, а не набор теории</h2>
     </div>
     <div class="outcomes-grid reveal">
-      <div class="outcome"><span class="outcome__num">1</span><p>Ясно понимать, как устроен бюджетный процесс и где в нём находится закупка.</p></div>
-      <div class="outcome"><span class="outcome__num">2</span><p>Правильно работать с ЛБО и бюджетными обязательствами, избегая типовых ошибок.</p></div>
-      <div class="outcome"><span class="outcome__num">3</span><p>Синхронизировать планирование закупок с бюджетными ограничениями.</p></div>
-      <div class="outcome"><span class="outcome__num">4</span><p>Видеть риски до того, как они превращаются в нарушение.</p></div>
-      <div class="outcome" style="grid-column:1/-1"><span class="outcome__num">5</span><p>Готовиться к проверкам и взаимодействовать с контролёрами на одном языке.</p></div>
+      <div class="outcome"><span class="outcome__num">1</span><p>Понимать, как устроено казначейское обслуживание и что происходит на лицевых счетах учреждения.</p></div>
+      <div class="outcome"><span class="outcome__num">2</span><p>Видеть связь закупки с лимитами и планом ПФХД ещё на этапе планирования.</p></div>
+      <div class="outcome"><span class="outcome__num">3</span><p>Проходить блокирующий контроль целевого расходования средств без сюрпризов.</p></div>
+      <div class="outcome"><span class="outcome__num">4</span><p>Правильно вести исполнение контракта: обязательство, приёмка, оплата.</p></div>
+      <div class="outcome" style="grid-column:1/-1"><span class="outcome__num">5</span><p>Понимать, как работает система казначейских платежей и от чего зависят сроки оплаты.</p></div>
     </div>
     <div class="result-banner reveal">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-      <p><b>Итог:</b> работающая схема от планирования бюджета до казначейского платежа и прохождения контроля.</p>
+      <p><b>Итог:</b> целостная картина пути бюджетных денег — от лицевого счёта до платежа поставщику.</p>
     </div>
   </div>
 </section>
@@ -552,16 +557,16 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Формат курса</span>
-      <h2 class="h2">Пять практических разборов в единой программе</h2>
+      <h2 class="h2">Три занятия в формате практических разборов</h2>
     </div>
     <div class="fmt-grid reveal">
-      <div class="fmt-card"><div class="fmt-card__big">5</div><div class="fmt-card__lbl">вебинаров</div><p>Тематические вебинары в формате практических разборов.</p></div>
-      <div class="fmt-card"><div class="fmt-card__big">5</div><div class="fmt-card__lbl">модулей</div><p>Каждый вебинар — отдельный модуль, но вместе они образуют единую программу.</p></div>
-      <div class="fmt-card"><div class="fmt-card__big">∞</div><div class="fmt-card__lbl">доступ к записям</div><p>Кейсы, типовые ошибки, реальные ситуации и решения под регуляторику РФ.</p></div>
+      <div class="fmt-card"><div class="fmt-card__big">3</div><div class="fmt-card__lbl">занятия</div><p>Тематические вебинары: кейсы, типовые ошибки и решения под регуляторику РФ.</p></div>
+      <div class="fmt-card"><div class="fmt-card__big">1</div><div class="fmt-card__lbl">единая программа</div><p>Каждое занятие — отдельная тема, но вместе они образуют цельный путь от бюджета до платежа.</p></div>
+      <div class="fmt-card"><div class="fmt-card__big">∞</div><div class="fmt-card__lbl">доступ к записям</div><p>Записи остаются доступны после эфиров — можно вернуться к любой теме.</p></div>
     </div>
     <div class="fmt-note reveal">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
-      <span><b>Формат:</b> онлайн, с возможностью последующего доступа к записям.</span>
+      <span><b>Формат:</b> онлайн, с возможностью последующего доступа к записям. Занятия можно проходить и по отдельности.</span>
     </div>
   </div>
 </section>
@@ -571,8 +576,8 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Программа курса</span>
-      <h2 class="h2">Пять модулей — от бюджетного процесса до проверки</h2>
-      <p class="lead" style="margin-top:18px">Нажмите на модуль, чтобы раскрыть содержание.</p>
+      <h2 class="h2">Три занятия — путь бюджетных денег от плана до платежа</h2>
+      <p class="lead" style="margin-top:18px">Нажмите на занятие, чтобы раскрыть содержание. Каждое занятие можно пройти отдельно.</p>
     </div>
 
     <div class="modules reveal">
@@ -580,17 +585,17 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
         <summary class="module__head">
           <span class="module__no">01</span>
           <span class="module__titles">
-            <span class="module__title">Бюджетный процесс и казначейское обслуживание</span>
-            <span class="module__sub">Где закупка находится в бюджетном процессе — на практике</span>
+            <span class="module__title">Бюджетный процесс для закупщика</span>
+            <span class="module__sub">Казначейское обслуживание, лицевые счета и роль финансовых органов</span>
           </span>
+          <span class="module__price">3&nbsp;000&nbsp;₽</span>
           <span class="module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
         <div class="module__body">
           <ul>
             <li>Учреждение в системе казначейского обслуживания: особенности для КУ и БУ</li>
             <li>Роль Казначейства России и финансовых органов</li>
-            <li>Типы лицевых счетов по типам учреждений и их связь с бюджетными данными</li>
-            <li>Бюджетная классификация (КБК) и где возникают ключевые риски на старте</li>
+            <li>Типы лицевых счетов в зависимости от типа учреждения и связь с бюджетными данными</li>
           </ul>
         </div>
       </details>
@@ -599,25 +604,17 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
         <summary class="module__head">
           <span class="module__no">02</span>
           <span class="module__titles">
-            <span class="module__title">ЛБО, планирование закупок и блокирующий контроль</span>
-            <span class="module__sub">Как не допустить расхождений между лимитами и закупками</span>
+            <span class="module__title">Планирование и осуществление закупок</span>
+            <span class="module__sub">Блокирующий контроль целевого расходования бюджетных средств</span>
           </span>
+          <span class="module__price">3&nbsp;000&nbsp;₽</span>
           <span class="module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
         <div class="module__body">
           <ul>
-            <li>ЛБО и лимиты / ПФХД на лицевых счетах: доведение и распределение</li>
-            <li>Связь плана закупок, ПФХД и бюджета; обоснование и синхронизация сроков</li>
-            <li>Извещение и связь с принимаемым обязательством; перечень финансовых контролей (особенности БУ)</li>
-            <li>Блокирующий контроль целевого расходования бюджетных средств</li>
-            <li>Типовые ошибки заказчиков:
-              <ul class="sub-ul">
-                <li>закупка без достаточных лимитов</li>
-                <li>некорректная детализация</li>
-                <li>несоответствие КБК</li>
-              </ul>
-            </li>
-            <li>Кейсы: «план есть — денег нет» и «деньги есть — закупка не запланирована»</li>
+            <li>Связь с лимитами или планом ПФХД на лицевых счетах</li>
+            <li>Извещение и связь с принимаемым обязательством; перечень финансовых контролей и особенности для БУ</li>
+            <li>Контроль целевого расходования средств</li>
           </ul>
         </div>
       </details>
@@ -626,35 +623,10 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
         <summary class="module__head">
           <span class="module__no">03</span>
           <span class="module__titles">
-            <span class="module__title">Исполнение контракта и денежные обязательства</span>
-            <span class="module__sub">Принятие обязательств, приёмка, кассовое исполнение — тонкости БУ и АУ</span>
+            <span class="module__title">Исполнение контракта и его оплата</span>
+            <span class="module__sub">Что такое система казначейских платежей</span>
           </span>
-          <span class="module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
-        </summary>
-        <div class="module__body">
-          <ul>
-            <li>Контракт и бюджетное обязательство: какие тонкости на этом этапе</li>
-            <li>Документ о приёмке: его роль в бюджетном процессе и связь с бухгалтерским учётом</li>
-            <li>Автосанкция денежных обязательств и что нужно сделать, чтобы всё прошло без ошибок</li>
-            <li>Кассовое исполнение; последствия изменений, переносов и расторжений контрактов</li>
-            <li>Риски:
-              <ul class="sub-ul">
-                <li>превышение лимитов</li>
-                <li>нецелевое использование</li>
-                <li>кассовые разрывы</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="module">
-        <summary class="module__head">
-          <span class="module__no">04</span>
-          <span class="module__titles">
-            <span class="module__title">Платёж и система казначейских платежей</span>
-            <span class="module__sub">Как деньги доходят до поставщика — и от чего зависят сроки</span>
-          </span>
+          <span class="module__price">3&nbsp;000&nbsp;₽</span>
           <span class="module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
         <div class="module__body">
@@ -665,61 +637,42 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
           </ul>
         </div>
       </details>
-
-      <details class="module">
-        <summary class="module__head">
-          <span class="module__no">05</span>
-          <span class="module__titles">
-            <span class="module__title">Финансовый контроль и матрица контролей</span>
-            <span class="module__sub">Как смотрят проверяющие и где чаще всего «ловят»</span>
-          </span>
-          <span class="module__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span>
-        </summary>
-        <div class="module__body">
-          <div class="guest">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg>
-            <span>Модуль с участием <b>Юлии Обаляевой</b></span>
-          </div>
-          <ul>
-            <li>Кто и как проверяет закупки с точки зрения бюджета; логика контрольных органов</li>
-            <li>Типовые нарушения:
-              <ul class="sub-ul">
-                <li>несоответствие ЛБО</li>
-                <li>ошибки в обосновании</li>
-                <li>нарушения при исполнении контрактов</li>
-              </ul>
-            </li>
-            <li>Как подготовиться к проверке и рекомендации по снижению рисков</li>
-            <li><b>Матрица всех бюджетных и финансовых контролей</b> на всех этапах закупки — от планирования до платежа</li>
-          </ul>
-        </div>
-      </details>
     </div>
   </div>
 </section>
 
-<!-- ===== Result ===== -->
-<section class="section result" id="result">
+<!-- ===== Price ===== -->
+<section class="section price" id="price">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">Итоговый результат</span>
-      <h2 class="h2">Единая рабочая схема вместо разрозненных блоков</h2>
+      <span class="eyebrow">Стоимость</span>
+      <h2 class="h2">Весь курс или отдельные занятия — на выбор</h2>
     </div>
-    <div class="chain reveal">
-      <div class="chain__step"><span class="chain__num"></span><h4>Планирование бюджета</h4><p>Отправная точка системы</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>Доведение ЛБО</h4><p>Лимиты и обязательства</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>Планирование и исполнение закупок</h4><p>Синхронно с бюджетом</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>Казначейский платёж</h4><p>Доведение до денег</p></div>
-      <div class="chain__step"><span class="chain__num"></span><h4>Учёт, контроль, матрица</h4><p>Готовность к проверке</p></div>
+    <div class="price-grid reveal">
+      <div class="price-card price-card--hl">
+        <div class="price-card__lbl">Весь курс</div>
+        <div class="price-card__val">9&nbsp;000&nbsp;₽</div>
+        <div class="price-card__per">три занятия единой программой</div>
+        <ul class="price-card__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Все 3 занятия курса</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Доступ к записям после эфиров</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Единая логика: от бюджета до платежа</li>
+        </ul>
+        <a href="#register" class="btn btn--primary btn--lg btn--block">Записаться на курс</a>
+      </div>
+      <div class="price-card">
+        <div class="price-card__lbl">Отдельное занятие</div>
+        <div class="price-card__val">3&nbsp;000&nbsp;₽</div>
+        <div class="price-card__per">за одно занятие</div>
+        <ul class="price-card__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Любое занятие на выбор</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Доступ к записи занятия</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Тема целиком за один вебинар</li>
+        </ul>
+        <a href="#register" class="btn btn--ghost btn--lg btn--block">Выбрать занятие</a>
+      </div>
     </div>
-    <div class="result-banner reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
-      <p><b>На выходе — матрица всех контролей:</b> кто, что и на каком этапе проверяет — от планирования до казначейского платежа.</p>
-    </div>
-    <div class="result__note reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 16v-4M12 8h.01"/></svg>
-      <p>Особенно важно для организаций, где бюджетный блок и закупочный блок существуют отдельно, но должны работать синхронно.</p>
-    </div>
+    <p class="price-note reveal">Запись на весь курс и на отдельные занятия — через форму ниже: укажите в заявке нужный вариант.</p>
   </div>
 </section>
 
@@ -741,7 +694,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
         <div class="sp-block">
           <h4>Экспертиза</h4>
           <ul>
-            <li>Бюджетное планирование и доведение ЛБО</li>
+            <li>Бюджетное планирование и доведение лимитов</li>
             <li>Связь бюджетного процесса и контрактной системы (44-ФЗ)</li>
             <li>Финансовый контроль и предотвращение нарушений при закупках</li>
             <li>Взаимодействие финансовых органов и заказчиков</li>
@@ -779,7 +732,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
       <div class="ben">
         <div class="ben__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M3 20h2M5 20V8a7 7 0 0114 0v12"/><path d="M9 13l2 2 4-4"/></svg></div>
         <h4>Практика, а не теория</h4>
-        <p>Каждый модуль — разбор реальных ситуаций и готовых решений.</p>
+        <p>Каждое занятие — разбор реальных ситуаций и готовых решений.</p>
       </div>
       <div class="ben">
         <div class="ben__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
@@ -807,7 +760,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
           <div class="want"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Снизить риск нарушений и претензий</div>
           <div class="want"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Выстроить прозрачную связку бюджета и закупок</div>
           <div class="want"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Говорить с финансовым контролем и закупочным блоком на одном языке</div>
-          <div class="want"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Получить работающую систему, а не набор разрозненных знаний</div>
+          <div class="want"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Понимать путь платежа — от распоряжения до денег у поставщика</div>
         </div>
         <div class="microcta">
           <span class="pulse"></span>
@@ -818,7 +771,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
       <div class="form-card reveal" id="formCard">
         <div class="form-fields">
           <h3>Записаться на курс</h3>
-          <p>Оставьте контакты — пришлём программу, даты вебинаров и условия участия.</p>
+          <p>Оставьте контакты — пришлём программу, даты занятий и условия участия. Весь курс — 9&nbsp;000&nbsp;₽, отдельное занятие — 3&nbsp;000&nbsp;₽.</p>
           <form id="regForm" novalidate>
             <div class="field">
               <label for="name">ФИО</label>
@@ -838,6 +791,15 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
                 <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
               </div>
             </div>
+            <div class="field">
+              <label for="variant">Вариант участия</label>
+              <select id="variant" name="variant">
+                <option value="full" selected>Весь курс — 9 000 ₽</option>
+                <option value="l1">Занятие 1: Бюджетный процесс для закупщика — 3 000 ₽</option>
+                <option value="l2">Занятие 2: Планирование закупок и блокирующий контроль — 3 000 ₽</option>
+                <option value="l3">Занятие 3: Исполнение контракта и его оплата — 3 000 ₽</option>
+              </select>
+            </div>
             <label class="consent">
               <input type="checkbox" id="consent" required>
               <span>Я согласен на обработку персональных данных и получение информации о курсе.</span>
@@ -848,7 +810,7 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
         <div class="form-success" id="formSuccess">
           <div class="form-success__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></div>
           <h3>Заявка отправлена</h3>
-          <p>Спасибо! Мы свяжемся с вами и пришлём программу курса и даты вебинаров на указанный email.</p>
+          <p>Спасибо! Мы свяжемся с вами и пришлём программу курса и даты занятий на указанный email.</p>
         </div>
       </div>
     </div>
@@ -870,13 +832,13 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
         <a href="#offer">О курсе</a>
         <a href="#audience">Для кого</a>
         <a href="#program">Программа</a>
-        <a href="#format">Формат</a>
+        <a href="#price">Стоимость</a>
         <a href="#speaker">Спикер</a>
         <a href="#register">Записаться</a>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© АО «Сбербанк-АСТ», Электронный университет. Курс «Бюджет и закупки без разрывов».</span>
+      <span>© АО «Сбербанк-АСТ», Электронный университет. Курс «Бюджетное окружение процесса закупок. Просто о сложном».</span>
       <span class="footer__credit">Разработано в лаборатории <a href="https://t.me/tickettotender" target="_blank" rel="noopener">«Тендеры ex machina»</a></span>
     </div>
   </div>
@@ -914,7 +876,6 @@ body.menu-open .mobile-menu{transform:translateY(0);opacity:1;pointer-events:aut
   var modules=document.querySelectorAll('.module');
   modules.forEach(function(m){
     m.querySelector('.module__head').addEventListener('click',function(){
-      // allow default toggle, then close others
       setTimeout(function(){
         if(m.open){ modules.forEach(function(other){ if(other!==m){other.open=false;} }); }
       },0);
